@@ -23,7 +23,7 @@ export default function Navbar() {
 			transition={{ duration: 0.5 }}
 		>
 			<Container>
-				<div className="flex items-center justify-between h-20">
+				<div className="flex items-center justify-between h-22">
 					<motion.div className="text-2xl font-bold text-primary" whileHover={{ scale: 1.05 }}>
 						Sleek Scope
 					</motion.div>
