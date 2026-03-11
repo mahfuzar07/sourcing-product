@@ -20,7 +20,7 @@ export default function TestimonialCard({ quote, author, title, rating, index = 
 		>
 			<div className="flex gap-1 mb-4">
 				{Array.from({ length: rating }).map((_, i) => (
-					<Star key={i} size={16} className="fill-accent text-accent" />
+					<Star key={i} size={20} className="fill-amber-300 text-accent" />
 				))}
 			</div>
 			<p className="text-foreground mb-6 leading-relaxed italic">"{quote}"</p>

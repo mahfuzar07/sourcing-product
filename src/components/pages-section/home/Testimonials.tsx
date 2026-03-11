@@ -43,7 +43,7 @@ export default function Testimonials() {
 	];
 
 	return (
-		<Section id="testimonials" className="bg-accent/5">
+		<Section id="testimonials" className="bg-linear-to-br from-sky-50 via-purple-50 to-pink-50">
 			<Container>
 				<div className="mb-16 text-center">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Trusted by Industry Leaders</h2>

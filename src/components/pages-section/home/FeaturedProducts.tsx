@@ -48,7 +48,9 @@ export default function FeaturedProducts() {
 		<Section id="products" className="bg-background">
 			<Container className="w-full">
 				<div className="mb-16 text-center">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Featured Products</h2>
+					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
+						Featured <span className="bg-linear-to-r from-purple-400 to-sky-300 bg-clip-text text-transparent">Products</span>
+					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 						Discover our curated selection of premium products from verified suppliers worldwide.
 					</p>

@@ -1,8 +1,7 @@
-import {  Search, Shield, TrendingUp, Zap } from 'lucide-react';
+import { Search, Shield, TrendingUp, Zap } from 'lucide-react';
 import FeatureCard from '../../reusable/FeatureCard';
 import Section from '../../ui/Section';
 import Container from '../../ui/Container';
-
 
 export default function Services() {
 	const services = [
@@ -32,7 +31,9 @@ export default function Services() {
 		<Section id="services" className="bg-background">
 			<Container>
 				<div className="mb-16 text-center">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Why Choose Sleek Scope?</h2>
+					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
+						Why Choose <span className="bg-linear-to-r from-purple-400 to-sky-300 bg-clip-text text-transparent"> Sleek Scope?</span>
+					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 						We've revolutionized the product sourcing experience with cutting-edge technology and unmatched reliability.
 					</p>

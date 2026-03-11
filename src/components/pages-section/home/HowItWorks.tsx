@@ -28,10 +28,12 @@ export default function HowItWorks() {
 	];
 
 	return (
-		<Section id="how-it-works" className="bg-accent/5">
+		<Section id="how-it-works" className="bg-linear-to-br from-sky-50 via-purple-50 to-pink-50">
 			<Container>
 				<div className="mb-16 text-center">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">Four Simple Steps</h2>
+					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
+						Four Simple <span className="bg-linear-to-r from-purple-400 to-sky-300 bg-clip-text text-transparent">Steps</span>
+					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">Getting started with Sleek Scope is straightforward and intuitive.</p>
 				</div>
 
@@ -46,7 +48,9 @@ export default function HowItWorks() {
 							className="relative"
 						>
 							<div className="card-base p-6 md:p-8 h-full">
-								<div className="text-5xl md:text-6xl font-bold text-accent/20 mb-4">{step.number}</div>
+								<div className="text-5xl md:text-6xl font-bold mb-4 bg-linear-to-b from-purple-300 to-sky-300 bg-clip-text text-transparent">
+									{step.number}
+								</div>
 								<h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
 								<p className="text-muted-foreground leading-relaxed">{step.description}</p>
 							</div>

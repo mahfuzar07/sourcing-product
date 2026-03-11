@@ -19,7 +19,7 @@ export default function FeatureCard({ icon, title, description, index = 0 }: Fea
 			whileHover={{ y: -4 }}
 		>
 			<div className="flex items-start gap-4 md:gap-6">
-				<div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-lg bg-accent/10 flex items-center justify-center text-accent text-2xl">
+				<div className="shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-lg  flex items-center justify-center text-white text-2xl bg-linear-to-r from-purple-300 to-sky-300">
 					{icon}
 				</div>
 				<div className="flex-1">
