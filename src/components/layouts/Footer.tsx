@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Search } from 'lucide-react'; // or use heroicons/react
 import Section from '../ui/Section';
 import Container from '../ui/Container';
