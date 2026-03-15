@@ -1,84 +1,76 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const navItems = [
-		{ label: 'Services', href: '#services' },
-		{ label: 'How It Works', href: '#how-it-works' },
-		{ label: 'Products', href: '#products' },
-		{ label: 'About', href: '#about' },
+		{ label: 'About Us', href: '#' },
+		{ label: 'Sourcing Services', href: '#' },
+		{ label: 'Product Categories', href: '#' },
+		{ label: 'Compliance', href: '#' },
+		{ label: 'Contact', href: '#' },
+		{ label: 'Blog', href: '#' },
 	];
 
 	return (
-		<motion.nav
-			className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-muted/20"
-			initial={{ y: -100 }}
-			animate={{ y: 0 }}
-			transition={{ duration: 0.5 }}
-		>
-			<Container>
-				<div className="flex items-center justify-between h-22">
-					<motion.div className="text-2xl font-bold text-primary" whileHover={{ scale: 1.05 }}>
-						Sleek Scope
-					</motion.div>
+		<>
+			<motion.nav
+				className="bg-linear-to-r  from-[#d9dcde] via-[#ffffff] to-[#d9dcde] border-b"
+				initial={{ y: -60 }}
+				animate={{ y: 0 }}
+				transition={{ duration: 0.4 }}
+			>
+				<Container>
+					<div className="flex items-center justify-between h-22">
+						{/* logo */}
+						<div className="flex items-center gap-2 font-bold text-xl">
+							<div className="w-8 h-8 bg-yellow-400 rounded-full"></div>
+							<span>
+								China <span className="text-yellow-600">Source Direct</span>
+							</span>
+						</div>
 
-					{/* Desktop Menu */}
-					<div className="hidden md:flex items-center gap-8">
-						{navItems.map((item) => (
-							<a key={item.label} href={item.href} className="text-foreground hover:text-primary transition-colors duration-200">
-								{item.label}
-							</a>
-						))}
-					</div>
-
-					<div className="hidden md:flex gap-4">
-						<Button variant="outline" size="sm">
-							Sign In
-						</Button>
-						<Button size="sm">Get Started</Button>
-					</div>
-
-					{/* Mobile Menu Button */}
-					<button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-						{isOpen ? <X size={24} className="text-foreground" /> : <Menu size={24} className="text-foreground" />}
-					</button>
-				</div>
-
-				{/* Mobile Menu */}
-				{isOpen && (
-					<motion.div
-						className="md:hidden pb-6 border-t border-muted/20"
-						initial={{ opacity: 0, y: -10 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -10 }}
-					>
-						<div className="flex flex-col gap-4 pt-4">
+						{/* desktop menu */}
+						<div className="hidden lg:flex items-center gap-8 font-medium">
 							{navItems.map((item) => (
-								<a
-									key={item.label}
-									href={item.href}
-									className="text-foreground hover:text-primary transition-colors duration-200"
-									onClick={() => setIsOpen(false)}
-								>
+								<a key={item.label} href={item.href} className="hover:text-yellow-600 transition text-lg font-semibold">
 									{item.label}
 								</a>
 							))}
-							<div className="flex flex-col gap-2 pt-2">
-								<Button variant="outline" size="sm">
-									Sign In
-								</Button>
-								<Button size="sm">Get Started</Button>
+						</div>
+
+						{/* right actions */}
+						<div className="hidden lg:flex items-center gap-6">
+							<Search size={20} className="text-gray-600 cursor-pointer" />
+
+							<Button className="hover:bg-blue-700 text-white px-5">Get a Quote</Button>
+						</div>
+
+						{/* mobile button */}
+						<button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+							{isOpen ? <X size={28} /> : <Menu size={28} />}
+						</button>
+					</div>
+
+					{/* mobile menu */}
+					{isOpen && (
+						<div className="lg:hidden pb-6">
+							<div className="flex flex-col gap-4">
+								{navItems.map((item) => (
+									<a key={item.label} href={item.href} className="py-2 border-b" onClick={() => setIsOpen(false)}>
+										{item.label}
+									</a>
+								))}
+								<Button className="mt-4 bg-blue-600 text-white">Get a Quote</Button>
 							</div>
 						</div>
-					</motion.div>
-				)}
-			</Container>
-		</motion.nav>
+					)}
+				</Container>
+			</motion.nav>
+		</>
 	);
 }
