@@ -1,10 +1,13 @@
 import Footer from '../components/layouts/Footer';
 import Navbar from '../components/layouts/Navbar';
+import FAQ from '../components/pages-section/home/FAQ';
 // import CTA from '../components/pages-section/home/CTA';
-import FeaturedProducts from '../components/pages-section/home/FeaturedProducts';
+// import FeaturedProducts from '../components/pages-section/home/FeaturedProducts';
 import Hero from '../components/pages-section/home/Hero';
 // import HowItWorks from '../components/pages-section/home/HowItWorks';
 import IndustriesSection from '../components/pages-section/home/IndustriesSection';
+import PersonalizedConsultation from '../components/pages-section/home/PersonalizedConsultation';
+import SourcingProcess from '../components/pages-section/home/SourcingProcess';
 // import Services from '../components/pages-section/home/Services';
 // import Testimonials from '../components/pages-section/home/Testimonials';
 import WhyChooseUs from '../components/pages-section/home/WhyChooseUs';
@@ -17,13 +20,17 @@ export default function Home() {
 			<main>
 				<Hero />
 				<IndustriesSection />
+
+				<SourcingProcess />
 				<WhyChooseUs />
+				<FAQ />
 				{/* <TrustBar/> */}
 				{/* <Services /> */}
 				{/* <HowItWorks /> */}
-				<FeaturedProducts />
+				{/* <FeaturedProducts /> */}
 				{/* <Testimonials /> */}
 				{/* <CTA /> */}
+				<PersonalizedConsultation />
 				<Footer />
 			</main>
 			<footer />

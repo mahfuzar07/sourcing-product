@@ -17,16 +17,16 @@ export default function Footer() {
 
 						{/* Social Icons */}
 						<div className="flex gap-4">
-							<a href="#" className="text-gray-400 hover:text-white transition-colors">
+							<a href="#" className="text-gray-200 hover:text-white transition-colors">
 								<Facebook size={22} />
 							</a>
-							<a href="#" className="text-gray-400 hover:text-white transition-colors">
+							<a href="#" className="text-gray-200 hover:text-white transition-colors">
 								<Twitter size={22} />
 							</a>
-							<a href="#" className="text-gray-400 hover:text-white transition-colors">
+							<a href="#" className="text-gray-200 hover:text-white transition-colors">
 								<Instagram size={22} />
 							</a>
-							<a href="#" className="text-gray-400 hover:text-white transition-colors">
+							<a href="#" className="text-gray-200 hover:text-white transition-colors">
 								<Linkedin size={22} />
 							</a>
 						</div>
@@ -39,8 +39,8 @@ export default function Footer() {
 						<div className="relative mb-8">
 							<input
 								type="text"
-								placeholder="Sop search..."
-								className="w-full bg-white/10 border border-white/20 rounded-md py-3 px-5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-white/40"
+								placeholder="Search..."
+								className="w-full bg-white text-black border border-white/20 rounded-md py-3 px-5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-white/40"
 							/>
 							<button className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-400 hover:bg-orange-500 text-white h-full px-8 rounded-md transition-colors">
 								<Search />
