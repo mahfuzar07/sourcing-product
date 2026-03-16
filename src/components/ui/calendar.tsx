@@ -34,11 +34,11 @@ function Calendar({
 
 				month: cn('flex flex-col w-full gap-4', defaultClassNames.month),
 
-				nav: cn('flex items-center justify-between absolute top-2 left-0 right-0 px-2', defaultClassNames.nav),
+				nav: cn('flex items-center justify-between absolute left-0 right-0 px-2 h-10', defaultClassNames.nav),
 
-				button_previous: cn('p-2 hover:bg-gray-100 rounded-md', defaultClassNames.button_previous),
+				button_previous: cn('p-2 hover:bg-slate-50 text-orange-400 rounded-md', defaultClassNames.button_previous),
 
-				button_next: cn('p-2 hover:bg-gray-100 rounded-md', defaultClassNames.button_next),
+				button_next: cn('p-2 hover:bg-slate-50 text-orange-400 rounded-md', defaultClassNames.button_next),
 
 				month_caption: cn('flex items-center justify-center h-10', defaultClassNames.month_caption),
 
