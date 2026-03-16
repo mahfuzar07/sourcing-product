@@ -1,35 +1,41 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant?: 'primary' | 'secondary' | 'outline' | 'gradient' | 'gradientoOutline';
-	size?: 'sm' | 'md' | 'lg';
-	children: React.ReactNode;
+	variant?: 'primary' | 'secondary' | 'outline' | 'gradient' | 'gradientoOutline' | 'default';
+	size?: 'sm' | 'md' | 'lg' | 'xs';
 }
 
-export default function Button({ variant = 'primary', size = 'md', className = '', children, ...props }: ButtonProps) {
-	const baseClasses = 'font-semibold rounded-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer px-5';
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ variant = 'primary', size = 'md', className = '', children, ...props }, ref) => {
+	const baseClasses = 'font-semibold rounded-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer';
 
 	const variantClasses = {
-		primary: 'bg-[#23659b] hover:bg-primary-dark text-background',
+		primary: 'bg-[#23659b] hover:bg-[#1b4e78] text-white',
 
-		gradient: 'bg-linear-to-r from-sky-200 to-purple-200 text-purple-700',
+		gradient: 'bg-gradient-to-r from-sky-200 to-purple-200 text-purple-700',
 
-		gradientoOutline: 'border-2 border-foreground hover:bg-foreground hover:text-background text-foreground',
+		gradientoOutline: 'border-2 border-black hover:bg-black hover:text-white',
 
-		secondary: 'bg-accent hover:bg-accent/90 text-foreground',
+		secondary: 'bg-gray-200 hover:bg-gray-300 text-black',
+
+		default: 'bg-transparent',
 
 		outline: 'border-2 border-sky-200 hover:bg-blue-600 hover:text-white',
 	};
 
 	const sizeClasses = {
-		sm: 'px-4 py-2 text-sm',
-		md: 'px-6 py-3 text-base',
-		lg: 'px-8 py-4 text-lg',
+		xs: 'px-2 py-1 text-xs',
+		sm: 'px-3 py-1.5 text-sm',
+		md: 'px-5 py-2.5 text-base',
+		lg: 'px-7 py-3 text-lg',
 	};
 
 	return (
-		<button className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`} {...props}>
+		<button ref={ref} className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`} {...props}>
 			{children}
 		</button>
 	);
-}
+});
+
+Button.displayName = 'Button';
+
+export default Button;
