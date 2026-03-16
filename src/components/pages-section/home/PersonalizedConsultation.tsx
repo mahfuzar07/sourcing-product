@@ -1,6 +1,4 @@
-'use client';
 
-import * as React from 'react';
 import Section from '../../ui/Section';
 import Container from '../../ui/Container';
 import { Input } from '../../ui/input';
@@ -10,12 +8,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Label } from '../../ui/label';
 import { Calendar } from '../../ui/calendar';
 import Button from '../../ui/Button';
+import { useState } from 'react';
 
 export default function PersonalizedConsultation() {
-	const [selectedDate, setSelectedDate] = React.useState<Date>(new Date());
-	const [industry, setIndustry] = React.useState('');
-	const [productType, setProductType] = React.useState('');
-	const [volume, setVolume] = React.useState('');
+	const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+	const [industry, setIndustry] = useState('');
+	const [productType, setProductType] = useState('');
+	const [volume, setVolume] = useState('');
 
 	return (
 		<Section className="bg-[#0a2540] relative py-16 md:py-20 text-white">
