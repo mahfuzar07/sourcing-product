@@ -30,7 +30,7 @@ export default function Navbar() {
 						<div className="flex items-center gap-2 font-bold text-xl">
 							<div className="w-8 h-8 bg-yellow-400 rounded-full"></div>
 							<span>
-								China <span className="text-yellow-600">Source Direct</span>
+								Source <span className="text-yellow-600">Product</span>
 							</span>
 						</div>
 
